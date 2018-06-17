@@ -6,12 +6,13 @@
 
 import sys, cv2, argparse, time, pdb, pickle
 import numpy as np 
-from trainning_v1 import Feature 
+from trainning_v4 import Feature 
 
-name_f = input("What file do you want to open: ")
-f=open(name_f,"rb")
-Dtr=pickle.load(f)
+def Read_Dtr(name_f): 
 
-print("Succesfully loaded file")
-print(Dtr)
-pdb.set_trace()
+	f=open(name_f,"rb")
+	Dtr=pickle.load(f)
+
+	print("Succesfully loaded file")
+	#print(Dtr)
+	return Dtr
